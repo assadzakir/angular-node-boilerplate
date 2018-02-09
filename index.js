@@ -1,13 +1,18 @@
 /* eslint-disable no-console */
 import express from 'express';
+import http from 'http';
 import middlewaresConfig from './server/config/middlewares';
+import chatConfig from './server/modules/chat/chat-config'
 import {chatAppRoutes} from './server/modules';
 
 const app = express();
+const server = http.createServer(app);
 
 // middlewares
 middlewaresConfig(app);
 
+// socket.io config
+chatConfig(server);
 // app.get('/', (req, res) => {
 //   res.send('tone analyzer chat-bot is running');
 // });
@@ -16,7 +21,8 @@ app.use('/tn', [chatAppRoutes]);
 
 const PORT = process.env.PORT || 3000;
 
-const server = app.listen(PORT, err => {
+
+server.listen(PORT, err => {
   if (err) {
     console.log(err);
   } else {

@@ -1,0 +1,9 @@
+<div>
+  <input type="text" #msgInput name="" value="">
+  <button (click)="sendMsg(msgInput.value)">Send</button>
+  <br>
+  {{msg}}
+  <ul *ngFor="let m of msg">
+    <li>{{m}}</li>
+  </ul>
+</div>
