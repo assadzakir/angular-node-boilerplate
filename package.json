@@ -45,6 +45,9 @@
     "socket.io": "^2.0.4",
     "swagger-ui-express": "2.0.6",
     "validator": "^9.2.0",
+    "apiai": "^2.0.5",
+    "request": "^2.72.0",
+    "uuid": "^2.0.3",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

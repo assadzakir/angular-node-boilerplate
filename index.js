@@ -3,7 +3,7 @@ import express from 'express';
 import http from 'http';
 import middlewaresConfig from './server/config/middlewares';
 import chatConfig from './server/modules/chat/chat-config'
-import {chatAppRoutes} from './server/modules';
+import {chatAppRoutes, fbAppRoutes} from './server/modules';
 
 const app = express();
 const server = http.createServer(app);
@@ -17,7 +17,7 @@ chatConfig(server);
 //   res.send('tone analyzer chat-bot is running');
 // });
 
-app.use('/tn', [chatAppRoutes]);
+app.use('/tn', [chatAppRoutes, fbAppRoutes]);
 
 const PORT = process.env.PORT || 3000;
 
