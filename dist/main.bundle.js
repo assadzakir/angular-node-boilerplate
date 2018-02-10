@@ -97,7 +97,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var config = { url: 'http://localhost:3000', options: {} };
+var config = { url: 'https://chatbo8.herokuapp.com', options: {} };
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }

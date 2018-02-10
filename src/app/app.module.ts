@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import {ChatService} from './chat/chat.service';
 
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
+const config: SocketIoConfig = { url: 'https://chatbo8.herokuapp.com', options: {} };
 
 
 @NgModule({
